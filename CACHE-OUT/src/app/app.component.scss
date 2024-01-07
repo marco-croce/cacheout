@@ -1,0 +1,24 @@
+ion-alert {
+    --background: #048785;
+    .alert-subHeader {
+      color: lightgoldenrodyellow !important;
+      text-align: center;
+      font-size: 14px !important;
+    }
+    .alert-head {
+      padding-bottom: 10px;
+    }
+}
+
+ion-item {
+  --min-height: 50px;
+}
+
+ion-icon {
+  font-size: 2em;
+  color: #048785;
+} 
+
+ion-item ion-icon {
+  margin-inline-end: 30px;
+}

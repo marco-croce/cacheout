@@ -1,0 +1,27 @@
+<ion-content [fullscreen]="true" class="animated fadeIn login auth-page">
+
+  <div class="auth-content">
+
+    <div class="page-title">
+
+      <ion-label>CACHE-OUT</ion-label>
+
+    </div>
+
+    <div padding-horizontal text-center class="animated fadeInDown">
+      <div class="logo"></div>
+    </div>
+
+    <form [formGroup]="loginFormModel" class="list-form">
+      <ion-label><ion-icon name="person-outline" item-start></ion-icon>&nbsp;Username</ion-label>
+      <ion-input id="username" type="text" formControlName="username"></ion-input>
+      <ion-label><ion-icon name="lock-open-outline" item-start></ion-icon>&nbsp;Password</ion-label>
+      <ion-input id="password" type="password" formControlName="password"></ion-input>
+      <ion-button (click)="onSubmit()" [disabled]="!loginFormModel.valid">ACCEDI</ion-button>
+    </form>
+
+    <ion-button routerLink="signin">REGISTRATI</ion-button>
+
+  </div>
+
+</ion-content>

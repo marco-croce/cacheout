@@ -1,0 +1,57 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>cache_user</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Le Mie Cache</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-refresher slot="fixed" (ionRefresh)="handleRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+
+  <div class="caches">
+    <ion-list>
+      <ion-item class="header-row">
+        <ion-label>Nome</ion-label>
+        <ion-label>Città</ion-label>
+        <ion-label>Difficoltà</ion-label>
+        <ion-label>Rimuovi</ion-label>
+      </ion-item>
+      <ion-item *ngFor="let cache of listaCache; let i = index">
+        <ion-label (click)="dettaglioCache(cache)"><b>{{ cache.nome }}</b></ion-label>
+        <ion-label (click)="dettaglioCache(cache)">{{ cache.citta }}</ion-label>
+        <ion-label (click)="dettaglioCache(cache)"> <ion-icon name="star" color="warning" />
+          <ion-icon *ngIf="cache.difficolta == 'Intermedio'  
+          || cache.difficolta == 'Difficile'" name="star" color="warning" />
+          <ion-icon *ngIf="cache.difficolta == 'Difficile'" name="star" color="warning" /></ion-label>
+        <ion-label (click)="onCancel(cache)"><ion-button size="small" color="danger">X</ion-button></ion-label>
+      </ion-item>
+    </ion-list>
+  </div>
+
+  <ion-popover [isOpen]="isPopoverOpen" (didDismiss)="isPopoverOpen = false" side="left" alignment="start">
+    <ng-template>
+      <ion-content class="ion-padding">
+        <ion-item>
+        <ion-label>Rimuovere la cache?</ion-label>
+        <ion-button size="small" color="success" (click)="accept()">V</ion-button> 
+        &nbsp;
+        <ion-button size="small" color="danger" (click)="reject()">X</ion-button>
+        </ion-item>
+      </ion-content>
+    </ng-template>
+  </ion-popover>
+
+  <div class="button">
+    <ion-button size="medium" shape="round" (click)="onSubmit()" tappable>
+      Aggiungi Cache
+    </ion-button>
+  </div>
+
+</ion-content>

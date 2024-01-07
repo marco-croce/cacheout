@@ -1,0 +1,57 @@
+.auth-content {
+  margin: 0 5%;
+
+  .logo {
+    width: 150px;
+    height: 200px;
+    margin: 20px auto 8px;
+    border-radius: 10%;
+    background: url("/assets/icon/icon.png") no-repeat;
+    background-size: 100%;
+  }
+
+  .list-form {
+    padding: 0;
+    margin-bottom: 0;
+
+    &:first-child {
+      border-top: none;
+    }
+
+    &:after {
+      display: none;
+    }
+
+    ion-label {
+      font-size: 1em;
+      color: #048785;
+      margin-bottom: 25px;
+    }
+
+    ion-input {
+      color: black;
+      background-color: #f1f5f1;
+      border-radius: 5px;
+      margin: 10px;
+      margin-left: 0px;
+      text-align: center;
+    }
+  }
+
+  ion-button {
+    font-weight: bold;
+    display: flex;
+    margin: auto;
+    margin-top: 30px;
+    --background: #048785;
+  }
+}
+
+.page-title {
+  text-align: center;
+  font-size: 2em;
+  font-weight: bolder;
+  font-family: "Poppins-ExtraBold";
+  color: #048785;
+  margin: 5%;
+}

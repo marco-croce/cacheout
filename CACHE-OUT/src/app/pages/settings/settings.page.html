@@ -1,0 +1,32 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Impostazioni</ion-title>
+    <ion-menu-button slot="end" menu="menu"></ion-menu-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="settings">
+    <ion-list>
+      <ion-item routerLink="username">
+        <ion-icon name="person-outline"></ion-icon>
+        <ion-label>Username</ion-label>
+        <ion-icon name="chevron-forward-outline"></ion-icon>
+      </ion-item>
+      <ion-item routerLink="profile">
+        <ion-icon name="key-outline"></ion-icon>
+        <ion-label>Profilo</ion-label>
+        <ion-icon name="chevron-forward-outline"></ion-icon>
+      </ion-item>
+      <ion-item routerLink="login" (click)="logout()">
+        <ion-icon name="log-out-outline"></ion-icon>
+        <ion-label>Disconnetti</ion-label>
+        <ion-icon name="chevron-forward-outline"></ion-icon>
+      </ion-item>
+    </ion-list>
+  </div>
+
+</ion-content>

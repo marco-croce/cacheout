@@ -1,0 +1,57 @@
+.caches {
+  margin-top: 25px;
+  margin-right: 20px;
+  margin-left: 20px;
+  ion-button {
+    text-align: center;
+  }
+}
+.header-row {
+  background-color: #044948;
+  font-weight: bold;
+  color: white;
+  height: 5%;
+}
+ion-item {
+  border: solid 1px black;
+  color: black;
+  text-align: center;
+}
+
+.button {
+  text-align: -webkit-center;
+  ion-button {
+    display: inline-block;
+    width: 50%;
+    margin: 30px;
+    margin-bottom: 50px;
+    --background:#044948;
+  }
+}
+
+ion-popover {
+  --width: 80%;
+  --height: auto;
+
+  ion-item {
+    border: solid 2px lightseagreen;
+    color: black;
+    border-radius: 5px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+  }
+
+  ion-button {
+    width: 10%;
+    height: 50%;
+    margin-top: 0px;
+    margin-left: 3%;
+    margin-right: 3%;
+  }
+
+  ion-label {
+    text-align: center;
+    margin: 5px;
+  }
+
+}

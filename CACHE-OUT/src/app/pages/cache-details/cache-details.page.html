@@ -1,0 +1,66 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>cache_details</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Dettagli Cache</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-grid class="photo">
+
+    <div *ngIf="cache && cache.foto">
+      <ion-img [src]="'data:image/jpeg;base64, ' + cache.foto.base64String"></ion-img>
+    </div>
+
+    <ion-row>
+      <ion-button (click)="onTakePhoto()">
+        <ion-icon name="camera"></ion-icon>
+        <ion-label>
+          &nbsp;Scatta
+        </ion-label>
+      </ion-button>
+    </ion-row>
+  </ion-grid>
+
+  <form [formGroup]="cacheFormModel">
+    <ion-list no-lines>
+      <ion-item class="animated fadeInUp">
+        <ion-label position="floating">Nome</ion-label>
+        <ion-input type="text" formControlName="nome" label="" required></ion-input>
+      </ion-item>
+      <ion-item class="animated fadeInUp">
+        <ion-label position="floating">Indizio</ion-label>
+        <ion-input type="text" label="" formControlName="indizio" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-select label="Difficoltà" label-placement="stacked" formControlName="difficolta">
+          <ion-select-option value="Facile">Facile</ion-select-option>
+          <ion-select-option value="Intermedio">Intermedio</ion-select-option>
+          <ion-select-option value="Difficile">Difficile</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-select label="Dimensione" label-placement="stacked" formControlName="dimensione">
+          <ion-select-option value="Piccolo">Piccolo</ion-select-option>
+          <ion-select-option value="Medio">Medio</ion-select-option>
+          <ion-select-option value="Grande">Grande</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+    <div class="buttons">
+      <ion-button color="success" size="medium" shape="round" (click)="onSubmit()" [disabled]="!cacheFormModel.valid"
+        tappable>
+        Conferma
+      </ion-button>
+      <ion-button icon-left size="medium" shape="round" color="primary" (click)="onCancel()" tappable>
+        Annulla
+      </ion-button>
+    </div>
+  </form>
+
+</ion-content>

@@ -1,0 +1,26 @@
+ion-button {
+    display: inline-block;
+    width: 25%;
+    margin: 30px;
+  }
+
+.buttons {
+  text-align: -webkit-center;
+}
+
+.photo {
+  margin: 0 auto;
+  margin-top: 30px;
+  ion-button {
+    width: 75%;
+    margin: 0 auto;
+    margin-top: 25px;
+  }
+}
+
+ion-grid {
+  max-width: 33%; 
+  width:100%; 
+  margin: auto; 
+  text-align: center;
+}

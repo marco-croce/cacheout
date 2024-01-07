@@ -1,0 +1,37 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="settings"></ion-back-button>
+    </ion-buttons>
+    <ion-title></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <div class="profile">
+
+    <ion-label><b>Modifica la visibilità della tua immagine del profilo</b></ion-label>
+
+    <form [formGroup]="profileFormModel">
+      <ion-list>
+        <ion-item lines="none">
+          <div class="checkbox">
+            <ion-checkbox name="public" labelPlacement="end" justify="start" formControlName="public" (ionChange)="onChangeCheckbox('public')">PUBBLICA</ion-checkbox>
+            <ion-checkbox name="private" labelPlacement="end" justify="start" formControlName="private" (ionChange)="onChangeCheckbox('private')">PRIVATA</ion-checkbox>
+          </div>
+        </ion-item>
+        <ion-item-divider></ion-item-divider>
+      </ion-list>
+      <div class="buttons">
+        <ion-button color="success" size="medium" shape="round" (click)="onSubmit()" [disabled]="!profileFormModel.valid" tappable>
+          Conferma
+        </ion-button>
+        <ion-button icon-left size="medium" shape="round" color="primary" (click)="onCancel()" tappable>
+          Annulla
+        </ion-button>
+      </div>
+    </form>
+  </div>
+
+</ion-content>

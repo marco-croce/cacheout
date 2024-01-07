@@ -1,0 +1,37 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Hai raggiunto una nuova cache?</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <form [formGroup]="raggFormModel" class="list-form">
+
+    <br>
+
+      <ion-textarea name="testo" formControlName="testo" fill="solid" rows="8" cols="4" label="Com'è stato raggiungere la cache?" labelPlacement="floating" helperText="Inserisci un feedback" required></ion-textarea>
+      <br>
+      <ion-label position="floating">Hai trovato la cache raggiunta?</ion-label>
+      <div class="checkbox">
+        <ion-checkbox name="trovato" labelPlacement="end" justify="start" formControlName="trovato" (ionChange)="onChangeCheckbox('trovato')">SI</ion-checkbox>
+        <ion-checkbox name="nontrovato" labelPlacement="end" justify="start" formControlName="nontrovato" (ionChange)="onChangeCheckbox('nontrovato')">NO</ion-checkbox>
+      </div>
+      <br>
+      <ion-label position="floating">É stato difficile raggiungere la cache?</ion-label>
+      <div class="checkbox">
+        <ion-checkbox name="facile" labelPlacement="end" justify="start" formControlName="facile" (ionChange)="onChangeCheckbox('facile')">Facile</ion-checkbox>
+        <ion-checkbox name="intermedio" labelPlacement="end" justify="start" formControlName="intermedio" (ionChange)="onChangeCheckbox('intermedio')">Intermedio</ion-checkbox>
+        <ion-checkbox name="difficile" labelPlacement="end" justify="start" formControlName="difficile" (ionChange)="onChangeCheckbox('difficile')">Difficile</ion-checkbox>
+      </div>
+
+      <ion-item-divider></ion-item-divider>
+
+      <ion-button color="success" (click)="onSubmit()" [disabled]="!raggFormModel.valid">Cache raggiunta!</ion-button>
+
+    <br> 
+    
+  </form>
+</ion-content>

@@ -1,0 +1,7 @@
+{
+  "name": "CACHE-OUT",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

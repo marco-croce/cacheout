@@ -1,0 +1,57 @@
+.statistiche {
+    margin: 20px;
+
+    .header-row {
+      background-color: #044948;
+      font-weight: bold;
+      color: white;
+      height: 5%;
+      text-align: center;
+    }
+    
+    ion-item {
+      border: solid 1px black;
+      color: black;
+    }
+
+    ion-label {
+      text-align: center;
+      margin: 10px;
+    }
+}
+
+p {
+  font-size: 1.3em;
+  text-align: center;
+  margin: 0 auto;
+  min-width: min-content;
+}
+
+.verticalLine {
+  width: 1%;
+  height: -webkit-fill-available;
+  background: lightgreen;
+}
+
+ion-progress-bar {
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+ion-progress-bar::part(progress) {
+  background: lightgreen;
+}
+
+ion-item {
+  text-align: center;
+  ion-icon {
+    font-size: 2em;
+    color: #048785;
+  } 
+  p {
+    ion-icon {
+      font-size: 1.2em;
+      color: #048785;
+    } 
+  }
+}

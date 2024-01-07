@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar>
+     <ion-title *ngIf="cache" (click)="profiloGeocacher(cache.geocacherId)">{{marker?.title}}</ion-title>
+     <ion-title *ngIf="marker?.title == 'La mia posizione'">{{marker?.title}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div *ngIf="!cache">
+    <ion-label>Raggiungi le cache nei dintorni prima dei tuoi amici!</ion-label>
+  </div>
+  <div *ngIf="isCacheMarker">
+    <ion-item>
+      <ion-icon name="pin" slot="start"></ion-icon>
+      <b>Posizione:</b> &nbsp; {{cache?.latitudine}}, {{cache?.longitudine}}
+    </ion-item>
+    <ion-item>
+      <ion-icon name="business" slot="start"></ion-icon>
+      <b>Città:</b> &nbsp; {{cache?.citta}}
+    </ion-item>
+
+    <ion-item>
+      <ion-icon name="speedometer" slot="start"></ion-icon>
+      <b>Difficoltà:</b> &nbsp; {{cache?.difficolta}}
+    </ion-item>
+
+    <ion-item >
+      <ion-icon name="expand" slot="start"></ion-icon>
+      <b>Dimensione:</b> &nbsp; {{cache?.dimensione}}
+    </ion-item>
+
+    <ion-item>
+      <ion-icon name="search" slot="start"></ion-icon>
+      <b>Indizio:</b> &nbsp; {{cache?.indizio}}
+    </ion-item>
+
+    <ion-item *ngIf= 'cache && cache.foto'>
+      <ion-icon name="image" slot="start"></ion-icon>
+      <ion-grid class="photo">
+        <ion-row>
+          <div>
+            <ion-img [src]="'data:image/jpeg;base64, ' + cache.foto.base64String"></ion-img>
+          </div>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+
+    <div class="buttons">
+      <ion-button *ngIf="cache && cache.geocacherId != idGeocacherLogged" color="success" size="medium" shape="round" (click)="onSubmit(cache)" tappable>
+        Ho raggiunto la cache
+      </ion-button>
+    </div>
+  
+  </div>
+</ion-content>

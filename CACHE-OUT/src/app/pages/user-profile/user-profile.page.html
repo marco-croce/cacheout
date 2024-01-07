@@ -1,0 +1,54 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Il mio profilo</ion-title>
+    <ion-menu-button slot="end" menu="menu"> </ion-menu-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-grid class="photo">
+    <ion-row>
+      <div *ngIf="geocacher && geocacher.foto">
+        <ion-img [src]="'data:image/jpeg;base64, ' + geocacher.foto.base64String"></ion-img>
+      </div>
+    </ion-row>
+    <ion-row>
+      <ion-button (click)="onTakePhoto()">
+        <ion-icon name="camera"></ion-icon>
+        <ion-label>
+          &nbsp;Scatta
+        </ion-label>  
+      </ion-button>  
+    </ion-row>
+  </ion-grid>
+
+  <form [formGroup]="profileFormModel">
+    <ion-list no-lines>
+      <ion-item class="animated fadeInUp">
+        <ion-label position="floating">Email</ion-label>
+        <ion-input type="email" formControlName="email" label="" required></ion-input>
+      </ion-item>
+      <ion-item class="animated fadeInUp">
+        <ion-label position="floating">Password</ion-label>
+        <ion-input type="password" formControlName="password" label="" required></ion-input>
+      </ion-item>
+      <ion-item class="animated fadeInUp">
+        <ion-label position="floating">Telefono</ion-label>
+        <ion-input type="tel" formControlName="telefono" label="" required></ion-input>
+      </ion-item>
+    </ion-list>
+    <div class="buttons">
+      <ion-button color="success" size="medium" shape="round" (click)="onSubmit()" [disabled]="!profileFormModel.valid" tappable>
+        Conferma
+      </ion-button>
+      <ion-button icon-left size="medium" shape="round" color="primary" (click)="onCancel()" tappable>
+        Annulla
+      </ion-button>
+    </div>
+  </form>
+
+</ion-content>

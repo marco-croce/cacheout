@@ -1,0 +1,83 @@
+.classifica {
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.ricerca {
+
+  ion-item {
+    background-color: #e9f0ef;
+    border: solid 1px #044948;
+  }
+
+}
+
+.header-row {
+  background-color: #044948;
+  font-weight: bold;
+  color: white;
+  height: 5%;
+}
+
+ion-label {
+  text-align: center;
+  margin: 10px;
+}
+
+ion-item {
+  border: solid 1px black;
+  color: black;
+}
+
+.highlighted-item {
+  background-color: #90b6b1;
+}
+
+p {
+  text-align: center;
+  margin-top: 1%;
+}
+
+ion-button {
+  text-align: center;
+  margin-top: 2%;
+  margin-left: 5%;
+  font-size: small;
+  width: 18%;
+  height: 6%;
+  color: white;
+  --background: #2ba19f;
+  --background-hover: #044948;
+}
+
+.badge {
+  background: #044948;
+  color: white;
+}
+
+ion-popover {
+  --width: 80%;
+  --height: auto;
+
+  ion-item {
+    border: solid 2px lightseagreen;
+    color: black;
+    border-radius: 5px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+  }
+
+  ion-button {
+    width: 10%;
+    height: 50%;
+    margin-top: 0px;
+    margin-left: 3%;
+    margin-right: 3%;
+  }
+
+  ion-label {
+    text-align: center;
+    margin: 5px;
+  }
+
+}

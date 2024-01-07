@@ -1,0 +1,79 @@
+.photo {
+    margin: 0 auto;
+    margin-top: 30px;
+    max-width: 33%;
+    width: 100%;
+    text-align: center;
+}
+
+.geocacher {
+    text-align: center;
+    font-size: 2.2em;
+    color: #048785;
+}
+
+.medal:first-child {
+    margin-left: 20%;
+}
+
+.medal {
+    margin-top: 5%;
+    margin-left: 5px;
+}
+
+ion-icon {
+    font-size: 2em;
+    color: #048785;
+    margin: 5px;
+}
+
+ion-button {
+    font-size: 1.2em;
+    width: 75%;
+}
+
+.richiesta {
+    display: inline-flex;
+    padding: 5%;
+}
+
+ion-popover {
+
+    --width: 80%;
+
+    --height: auto;
+
+
+
+    ion-item {
+
+        border: solid 2px lightseagreen;
+        color: black;
+        border-radius: 5px;
+        margin-top: 2%;
+        margin-bottom: 2%;
+
+    }
+
+
+
+    ion-button {
+        width: 10%;
+        height: 50%;
+        margin-top: 0px;
+        margin-left: 3%;
+        margin-right: 3%;
+
+    }
+
+
+
+    ion-label {
+        text-align: center;
+        margin: 5px;
+
+    }
+
+
+
+}

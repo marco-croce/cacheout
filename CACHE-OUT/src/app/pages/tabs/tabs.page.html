@@ -1,0 +1,31 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-menu-button slot="end" menu="menu"> </ion-menu-button>
+    <ion-title>CACHE-OUT</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-tabs>
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button tab="home">
+        <ion-icon name="compass"></ion-icon>
+        <ion-label>Esplora</ion-label>
+      </ion-tab-button>
+      <ion-tab-button tab="cache-user">
+        <ion-icon name="trophy"></ion-icon>
+        <ion-label>Le Mie Cache</ion-label>
+      </ion-tab-button>
+      <ion-tab-button tab="friends">
+        <ion-icon name="people"></ion-icon>
+        <ion-label>Amici</ion-label>
+      </ion-tab-button>
+      <ion-tab-button tab="statistics">
+        <ion-icon name="bar-chart"></ion-icon>
+        <ion-label>Statistiche</ion-label>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
+
+</ion-content>

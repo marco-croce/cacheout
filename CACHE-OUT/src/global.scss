@@ -1,0 +1,69 @@
+/* Core CSS required for Ionic components to work properly */
+@import "@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "@ionic/angular/css/normalize.css";
+@import "@ionic/angular/css/structure.css";
+@import "@ionic/angular/css/typography.css";
+@import "@ionic/angular/css/display.css";
+
+/* Optional CSS utils that can be commented out */
+@import "@ionic/angular/css/padding.css";
+@import "@ionic/angular/css/float-elements.css";
+@import "@ionic/angular/css/text-alignment.css";
+@import "@ionic/angular/css/text-transformation.css";
+@import "@ionic/angular/css/flex-utils.css";
+
+ion-item {
+  --ion-item-background: transparent;
+}
+
+ion-header {
+  ion-toolbar {
+    --background: #ccdedc;
+
+    ion-title {
+      --color: #048785;
+    }
+  }
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("./assets/fonts/Poppins-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Poppins-Bold";
+  src: url("./assets/fonts/Poppins-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Poppins-ExtraBold";
+  src: url("./assets/fonts/Poppins-ExtraBold.ttf");
+}
+
+ion-title {
+  font-family: "Poppins";
+}
+
+ion-label {
+  font-family: "Poppins";
+}
+
+ion-button {
+  font-family: "Poppins";
+}
+
+.alert-wrapper.sc-ion-alert-md {
+  border-radius: 15px;
+}
+.alert-title.sc-ion-alert-md {
+  padding-bottom: 15px;
+}
+.alert-sub-title.sc-ion-alert-md {
+  color: #615505;
+}
+.alert-button.sc-ion-alert-md {
+  color: black;
+}
